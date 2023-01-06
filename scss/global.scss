@@ -1,0 +1,204 @@
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Regular.woff2') format('woff2'), url('../fonts/Lato-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Medium.woff2') format('woff2'), url('../fonts/Lato-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Bold.woff2') format('woff2'), url('../fonts/Lato-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+//* Основные цвета
+$dunkel-blue: #263640;
+$white: #fff;
+$orange: #ff9900;
+$light-grey: #929a9f;
+$ultra-light-grey: #f5f8fa;
+
+//* Шрифт ссылок
+@mixin font-link {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 40px;
+}
+
+//* Кнопка-ссылка
+@mixin btn-link {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 40px;
+	background-color: $orange;
+	color: $white;
+	@include font-link;
+	padding: 0 16px;
+	transition: all 0.5s ease;
+	&::after {
+		content: '';
+		position: absolute;
+		background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z' fill='white'/%3e%3c/svg%3e")
+			no-repeat center/cover;
+		height: 12px;
+		width: 8px;
+		right: 24px;
+	}
+	&:hover::after {
+		right: 18px;
+	}
+}
+
+//* Ссылка со стрелкой
+@mixin link-orange {
+	position: relative;
+	transition: all 1s;
+	display: flex;
+	align-items: center;
+	&::after {
+		content: '';
+		position: absolute;
+		background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z' fill='%23ff9900'/%3e%3c/svg%3e")
+			no-repeat center/cover;
+		height: 12px;
+		width: 8px;
+		right: 24px;
+	}
+	&:hover::after {
+		right: 18px;
+	}
+}
+
+@mixin link-white {
+	position: relative;
+	transition: all 1s;
+	display: flex;
+	align-items: center;
+	&::after {
+		content: '';
+		position: absolute;
+		background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z' fill='%23929a9f'/%3e%3c/svg%3e")
+			no-repeat center/cover;
+		height: 12px;
+		width: 8px;
+		right: 24px;
+	}
+	&:hover::after {
+		right: 18px;
+	}
+}
+
+//* Обнуление основных стилей
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+*:focus {
+	outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+form input {
+	outline: none;
+}
+//* Обнуление основных стилей end
+
+//* Основные стили
+body {
+	font-family: Lato-Regular, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.75;
+	font-style: normal;
+	color: $light-grey;
+	background-color: $white;
+}
+
+.container {
+	max-width: 1246px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 1.4;
+	color: $dunkel-blue;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 1.375;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.85;
+	color: $dunkel-blue;
+}
+
+h4 {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.5;
+	color: $dunkel-blue;
+}
+
+h5 {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+h6 {
+	font-size: 14px;
+	line-height: 1.43;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}

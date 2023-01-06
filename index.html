@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weiss</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/global.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/media.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<a class="logo" href="#"><img src="images/logo.svg" alt="logo"></a>
+				<nav class="navbar">
+					<a class="navbar__link" href="#home">Главная</a>
+					<div class="navbar__link dropdown">
+						<button class="dropbtn">Сервисы
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="#">Сервис 1</a>
+							<a href="#">Сервис 2</a>
+							<a href="#">Сервис 3</a>
+						</div>
+					</div>
+					<div class="navbar__link dropdown">
+						<button class="dropbtn">Полномочия
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="#">Полномочия 1</a>
+							<a href="#">Полномочия 2</a>
+							<a href="#">Полномочия 3</a>
+						</div>
+					</div>
+					<a class="navbar__link" href="#news">О нас</a>
+				</nav>
+				<a class="header__btn" href="mailto:12345@weiss.com">
+					Контакт
+					<img class="mail-icon" src="images/mail.svg" alt="Mail">
+				</a>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="basic">
+			<div class="container">
+				<div class="basic__inner">
+					<div class="basic__content">
+						<h6 class="basic__name">Инженер Dieter Weiss</h6>
+						<h1 class="basic__title">Инженерное бюро для строительства и геодезии</h1>
+						<p class="basic__text">Если вам нужны надежные партнёры - инжиниринговая компания Dieter Weiss гарантирует успех ваших проектов.</p>
+						<a class="basic__link" href="#">Ваш проект с нами</a>
+					</div>
+					<div class="basic__picture">
+						<a class="basic__open" href="#openModal">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M11.3334 7.09077V2.60771L6.85038 2.60771L6.84331 0.606597H13.3345L13.3275 7.09077H11.3334ZM2.60774 6.85035L2.60774 11.3334H7.0908L7.09787 13.3345H0.606627L0.613698 6.85035L2.60774 6.85035Z" fill="#263640" />
+							</svg>
+						</a>
+						<img class="basic__img" src="images/basic-img.jpg" alt="Инженерное бюро Weiss">
+						<!-- Модальное окно -->
+						<div id="openModal" class="modal">
+							<div class="modal__dialog">
+								<a href="#close" title="Close" class="close">
+									<svg width="16" height="16" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.686279" y="28.8113" width="39.7748" height="2.65165" rx="1" transform="rotate(-45 0.686279 28.8113)" fill="black" />
+										<rect x="28.8113" y="30.6863" width="39.7748" height="2.65165" rx="1" transform="rotate(-135 28.8113 30.6863)" fill="black" />
+									</svg>
+								</a>
+								<img class="modal__picture" src="images/basic-img.jpg" alt="Инженерное бюро Weiss">
+							</div>
+						</div>
+						<!-- Модальное окно (end)-->
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service">
+			<div class="service__bg">
+				<div class="container">
+					<h3 class="service__title">Наши сервисы</h3>
+					<p class="service__text">Сервис - это вызов для наших сотрудников, это сила нашей команды. Независимо от планирования движения, снабжения и утилизации, защиты от шума или специальных зон - мы предлагаем комплексное обслуживание с:</p>
+					<div class="service__inner">
+						<div class="service__article">
+							<div class="service__article-picture">
+								<img class="service__article-img" src="images/service-1.jpg" alt="Our projects">
+							</div>
+							<div class="service__article-content">
+								<h4 class="service__article-title">Исследования и концепции, общее планирование</h4>
+								<p class="service__article-desc">
+									Новое строительство и расширение дорог, зон движения, водных и железных дорог требует убедительных концепций движения.
+								</p>
+								<a class="service__article-link" href="#">Узнайте больше</a>
+							</div>
+						</div>
+						<div class="service__article">
+							<div class="service__article-picture">
+								<img class="service__article-img" src="images/service-2.jpg" alt="Our projects">
+							</div>
+							<div class="service__article-content">
+								<h4 class="service__article-title">Транспортные средства и инженерные сооружения</h4>
+								<p class="service__article-desc">
+									Концепции дорожного движения являются решающим фактором в любой инфраструктуре. Поэтому инженерное бюро Weiss сформировало команду экспертов.
+								</p>
+								<a class="service__article-link" href="#">Узнайте больше</a>
+							</div>
+						</div>
+						<div class="service__article">
+							<div class="service__article-picture">
+								<img class="service__article-img" src="images/service-3.jpg" alt="Our projects">
+							</div>
+							<div class="service__article-content">
+								<h4 class="service__article-title">Расчетное измерение, 3D лазерное сканирование</h4>
+								<p class="service__article-desc">
+									Мы являемся мощным партнером, когда речь идет о выполнении всех геодезических задач в профиле услуг «Дизайн-опрос».
+								</p>
+								<a class="service__article-link" href="#">Узнайте больше</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="history">
+			<div class="container">
+				<div class="history__inner">
+					<div class="history__content">
+						<h6 class="history__subtitle">История нашей компании</h6>
+						<h2 class="history__title">Аспирант Дитер Вайс основал свое инженерное бюро в 1971 году.</h2>
+						<p class="history__desc">Он был единственным владельцем почти 30 лет. В 1998 году сын Клаус Вайс присоединился к отцу в качестве заместителя. Клаус Вайс является единственным управляющим директором с 2006 года</p>
+						<hr class="history__hr">
+						<a class="history__link" href="#">Продолжить чтение</a>
+					</div>
+					<div class="history__picture">
+						<img class="history__img" src="images/history-img.jpg" alt="Architect">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="blog">
+			<div class="container">
+				<div class="blog__top">
+					<div class="blog__top-content">
+						<h2 class="blog__top-title">Полезная информация</h2>
+						<p class="blog__top-desc">Масса неповрежденного горшка, белок старого горшка важен в Бюро меценатов. Само по себе заболевание является основным течением жасмина. До сих пор ни один салатный соус не предназначен для игроков, не беременных.</p>
+					</div>
+					<a class="blog__top-link">Наш блог</a>
+				</div>
+				<div class="blog__messages">
+					<h6 class="blog__messages-subtitle">последние сообщения</h6>
+					<div class="blog__messages-items">
+						<div class="blog__messages-art">
+							<h4 class=" blog__messages-art--title">Но это требует возвращения цены</h4>
+							<p class="blog__messages-art--desc">
+								Ни поклон, ни гравитация амет пеллетеские мавры. Старость всегда бежит завтра домашнее задание пить тележки паром ...
+							</p>
+							<a class="blog__messages-art--link">Продолжить чтение</a>
+						</div>
+						<div class="blog__messages-art">
+							<h4 class=" blog__messages-art--title">И он всегда зависал, и челюсти урны</h4>
+							<p class="blog__messages-art--desc">
+								На протяжении всей жизни Николай был надёжной опорой своей супруге, признав девочку за свою собственную дочь...
+							</p>
+							<a class="blog__messages-art--link">Продолжить чтение</a>
+						</div>
+						<div class="blog__messages-art">
+							<h4 class=" blog__messages-art--title">Со временем девушка вышла замуж.</h4>
+							<p class="blog__messages-art--desc">
+								Девушка пристрастилась к крепким алкогольным напиткам, чем начали пользоваться сомнительные компании...
+							</p>
+							<a class="blog__messages-art--link">Продолжить чтение</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact">
+			<div class="contact__bg">
+				<div class="container">
+					<div class="contact__inner">
+						<div class="contact__content">
+							<h6 class="contact__subtitle">Сделай карьеру с нами</h6>
+							<h2 class="contact__title">Связаться с нами</h2>
+							<p class="contact__desc">Алле стало невмоготу уживаться со своим взрослым непутёвым чадом, поэтому она решила разменять свою пятикомнатную квартиру.</p>
+							<a class="contact__link">Карьера</a>
+						</div>
+						<div class="contact__picture">
+							<img class="contact__img" src="images/contact-img.jpg" alt="Business center">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__bg">
+			<div class="container">
+				<div class="footer__top">
+					<a class="footer__logo" href="#">
+						<img class="logo" src="images/logo-white.svg" alt="logo">
+					</a>
+					<div class="footer__info">
+						<div class="footer__info-name">
+							<h5 class="footer__info-name--title">Директор компании</h5>
+							<p class="footer__info-name--text">Инженер-консультант</p>
+							<p class="footer__info-name--text">Dipl.-Ing. Klaus Weiss</p>
+						</div>
+						<address class="footer__info-adress">
+							<h5 class="footer__info-name--title">Адрес</h5>
+							<p class="footer__info-name--text">Straßenname 7</p>
+							<p class="footer__info-name--text">12345 Stadt</p>
+						</address>
+					</div>
+				</div>
+				<hr class="footer__hr">
+				<div class="footer__bottom">
+					<ul class="footer__bottom-list">
+						<li class="footer__bottom-list--item">
+							<a href="#">
+								<span class="footer__bottom-list--link">Отпечаток</span>
+							</a>
+						</li>
+						<li class="footer__bottom-list--item">
+							<a href="#">
+								<span class="footer__bottom-list--link">Конфиденциальность</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="script/script.js"></script>
+</body>
+
+</html>

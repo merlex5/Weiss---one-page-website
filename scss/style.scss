@@ -1,0 +1,508 @@
+@import 'global.scss';
+//* -- Шапка сайта --
+.header {
+	padding: 65px 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__btn {
+		padding: 0 24px;
+		background-color: $orange;
+		@include font-link;
+		color: $white;
+		display: flex;
+		gap: 16px;
+		width: 150px;
+		align-items: center;
+	}
+}
+
+.logo {
+	height: 40px;
+}
+
+//* Раскрывающийся пункт меню
+.navbar {
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 4vw;
+
+	&__link {
+		border-bottom: 2px solid transparent;
+	}
+
+	&__link:hover {
+		border-bottom: 2px solid $orange;
+		transition: all 0.6s;
+	}
+}
+
+.navbar a {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 40px;
+	padding: 0 8px;
+	color: $dunkel-blue;
+	text-align: center;
+	text-decoration: none;
+}
+
+.dropdown {
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 40px;
+	border: none;
+	outline: none;
+	color: $dunkel-blue;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+	color: $orange;
+	transition: all 0.4s;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: $white;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	padding: 0 10px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.dropdown-content a:hover {
+	background-color: $white;
+	transition: all 0.6s;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+//* Раскрывающийся пункт меню (end)
+.basic {
+	padding-top: 31px;
+
+	&__inner {
+		position: relative;
+	}
+
+	&__content {
+		max-width: 430px;
+		padding: 98px 0 169px;
+	}
+
+	&__name {
+		font-weight: 500;
+	}
+
+	&__title {
+		margin: 16px 0;
+	}
+
+	&__text {
+		margin-bottom: 38px;
+	}
+
+	&__link {
+		max-width: 215px;
+		@include btn-link;
+	}
+
+	&__picture {
+		position: absolute;
+		width: 593px;
+		top: 0;
+		right: 0;
+	}
+
+	&__open {
+		position: absolute;
+		top: 32px;
+		left: 32px;
+		width: 48px;
+		height: 48px;
+		border: none;
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, 0.5);
+		cursor: pointer;
+		z-index: 2;
+		transition: fill 0.5s;
+		& svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&:hover path {
+			fill: $orange;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2), -50px 100px 0px $ultra-light-grey;
+	}
+}
+
+//* --Модальное окно--
+/* свойства модального окна по умолчанию */
+.modal {
+	position: fixed; /* фиксированное положение */
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8); /* цвет фона */
+	z-index: 5;
+	opacity: 0; /* по умолчанию модальное окно прозрачно */
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in; /* анимация перехода */
+	pointer-events: none; /* элемент невидим для событий мыши */
+	/* при отображении модального окно */
+	&:target {
+		opacity: 1;
+		pointer-events: auto;
+		overflow-y: auto;
+	}
+	/* ширина модального окна и его отступы от экрана */
+	&__dialog {
+		position: relative;
+		width: 712px;
+		margin: 10px auto;
+		text-align: center;
+	}
+	&__picture {
+		width: 712px;
+	}
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	font-family: sans-serif;
+	color: $dunkel-blue;
+	text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+	color: $light-grey;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.service {
+	&__bg {
+		width: 100%;
+		background-color: $ultra-light-grey;
+		z-index: -1;
+	}
+
+	&__title {
+		padding-top: 178px;
+	}
+
+	&__text {
+		max-width: 526px;
+		margin: 16px 0 80px;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: baseline;
+		gap: 10vw;
+		flex-basis: 30%;
+		padding-bottom: 246px;
+	}
+
+	&__article {
+		flex-basis: 30%;
+	}
+
+	&__article-picture {
+		position: relative;
+		overflow: hidden;
+		height: 333px;
+		width: 100%;
+	}
+
+	&__article-img {
+		height: 333px;
+		width: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		object-fit: cover;
+		filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.07));
+	}
+
+	&__article-title {
+		margin: 24px 0;
+	}
+
+	&__article-desc {
+		margin: 24px 0;
+	}
+
+	&__article-link {
+		@include link-orange;
+		max-width: 170px;
+		font-weight: 500;
+		color: $orange;
+	}
+
+	&__article-link .fa {
+		vertical-align: top;
+		margin-left: 16px;
+	}
+}
+
+.history {
+	&__inner {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__content {
+		position: absolute;
+		width: 1009px;
+		min-height: 584px;
+		background-color: $dunkel-blue;
+		top: -107px;
+		left: 0;
+		padding: 98px 98px 74px;
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2), -50px 100px 0px $ultra-light-grey;
+	}
+
+	&__title {
+		margin: 25px 0;
+		color: $white;
+		max-width: 560px;
+	}
+
+	&__desc {
+		max-width: 418px;
+		color: $white;
+		margin-bottom: 54px;
+		line-height: 1.6;
+	}
+
+	&__hr {
+		height: 2px;
+		max-width: 500px;
+		background-color: $light-grey;
+		opacity: 0.2;
+		margin: 0;
+	}
+
+	&__link {
+		@include link-white;
+		max-width: 190px;
+		margin-top: 24px;
+	}
+
+	&__link .fa {
+		vertical-align: top;
+		margin-left: 16px;
+	}
+
+	&__picture {
+		filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.2));
+		z-index: 1;
+	}
+
+	&__img {
+		height: 660px;
+		margin-top: -8px;
+	}
+}
+
+.blog {
+	padding-top: 75px;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__top-content {
+		max-width: 488px;
+	}
+
+	&__top-title {
+		color: $dunkel-blue;
+		margin-bottom: 2px;
+	}
+
+	&__top-link {
+		max-width: 145px;
+		flex-basis: 15%;
+		@include btn-link;
+	}
+
+	&__messages {
+		padding: 64px 0 353px;
+	}
+
+	&__messages-subtitle {
+		font-weight: 400;
+		margin-bottom: 32px;
+	}
+
+	&__messages-items {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 44px;
+	}
+
+	&__messages-art {
+		flex-basis: 32%;
+
+		&--desc {
+			margin: 20px 0;
+		}
+
+		&--link {
+			@include link-orange;
+			max-width: 190px;
+			color: $orange;
+			font-weight: 500;
+		}
+
+		&--link .fa {
+			vertical-align: top;
+			margin-left: 16px;
+		}
+	}
+}
+
+.contact {
+	&__bg {
+		background-color: $ultra-light-grey;
+		padding: 101px 0 116px;
+	}
+
+	&__inner {
+		position: relative;
+	}
+
+	&__content {
+		max-width: 330px;
+	}
+
+	&__subtitle {
+		font-weight: 400;
+	}
+
+	&__title {
+		margin: 16px 0 24px;
+		color: $dunkel-blue;
+	}
+
+	&__link {
+		margin-top: 4px;
+		max-width: 134px;
+		@include btn-link;
+	}
+
+	&__picture {
+		position: absolute;
+		top: -224px;
+		right: 0;
+		filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.2));
+	}
+
+	&__img {
+		height: 484px;
+		object-fit: cover;
+	}
+}
+
+.footer {
+	&__bg {
+		background-color: $dunkel-blue;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 64px 0 56px;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 106px;
+		color: $white;
+	}
+
+	&__info-name--title {
+		letter-spacing: 1.75px;
+		text-transform: uppercase;
+		margin-bottom: 9px;
+	}
+
+	&__info-adress {
+		font-style: normal;
+	}
+
+	&__hr {
+		background-color: rgba($white, $alpha: 0.2);
+		width: 100%;
+		height: 1px;
+		margin: 0;
+	}
+
+	&__bottom {
+		color: rgba($white, $alpha: 0.5);
+		padding: 37px 0;
+	}
+
+	&__bottom-list {
+		display: flex;
+	}
+
+	&__bottom-list--item {
+		&:not(:last-child)::after {
+			content: '\20d2';
+			margin: 0 12px 0 9px;
+		}
+
+		& a:hover {
+			border-bottom: 1px solid $light-grey;
+		}
+	}
+}
